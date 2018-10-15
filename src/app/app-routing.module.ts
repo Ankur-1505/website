@@ -1,3 +1,5 @@
+import { AboutComponent } from './about/about.component';
+import { BlogComponent } from './blog/blog.component';
 import { PostComponent } from './post/post.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -15,6 +17,14 @@ const routes: Routes = [
   {
     path: 'read-post/:id',
     component : PostComponent
+  },
+  {
+    path : 'blog/:category',
+    component : BlogComponent
+  },
+  {
+    path : 'about',
+    component : AboutComponent
   }
 ];
 

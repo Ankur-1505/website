@@ -17,4 +17,23 @@
   <figure class="image">
     <img src="{{post.blogThumbnail}}">
   </figure>
+<div class="container post-header post-content-container">
+  <h1 class="title post-title">
+    {{post.title}}
+  </h1>
+  <div class="subtitle">
+  <h2 class="post-author has-text-link">
+    {{post.author}}
+  </h2>
+  <h2 class="post-author" [ngClass]="{technology : (post.category)=='Technology',coding : (post.category)=='Coding',lifestyle : (post.category)=='Lifestyle',announcements : (post.category)=='Announcements'}">
+    {{post.category}}
+  </h2>
+  </div>
+  <h2 class="post-summary post-content">
+    {{post.summary}}
+  </h2>
+</div>
+<div class="container post-content post-content-container">
+  <div [innerHTML]="post.content"></div>
+</div>
 </div>

@@ -1,0 +1,54 @@
+<div class="container has-text-centered blog-header" data-aos="fade-up">
+  <h1 class="title blog-title has-text-black is-size-1-mobile">
+    Blog.
+  </h1>
+  <h2 class="subtitle blog-description has-text-black">
+    Check out some of the latest posts
+  </h2>
+</div>
+
+<div class="container blog-cards">
+<div class="sk-circle" *ngIf="loading">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
+<div class="columns" *ngIf="!loading">
+  <div class="column is-one-third" *ngFor="let post of posts">
+    <div class="card">
+      <div class="card-image">
+        <figure class="image is-4by3">
+          <img src="{{post.blogThumbnail}}" alt="Placeholder image">
+        </figure>
+      </div>
+      <div class="card-content">
+        <div class="media">
+          <div class="media-content">
+            <p class="title is-4">{{post.title}}</p>
+            <div class="subtitle">
+              <p class="is-6 has-text-link">{{post.author}}</p>
+              <p class="is-5" [ngClass]="{technology : (post.category)=='Technology',coding : (post.category)=='Coding',lifestyle :
+              (post.category)=='Lifestyle',announcements : (post.category)=='Announcements'}">{{post.category}}</p>
+            </div>
+          </div>
+        </div>
+    
+        <div class="content">
+          {{post.summary}}<br>
+          <time datetime="dddd DD-MM-YYYY">{{post.date}}</time>
+        </div>
+        <a class="button is-link is-outlined" [routerLink]="['/read-post', post.id]">Read More</a>
+      </div>
+    </div>
+  </div>
+</div>
+</div>

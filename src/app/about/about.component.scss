@@ -1,0 +1,20 @@
+.about-title{
+    font-family: 'Bevan', cursive;
+    font-size: 3.5em;
+}
+.about-description{
+    font-family: 'K2D', sans-serif;
+    font-size: 1.3em;
+}
+.project-image-col{
+    margin: 30px;
+}
+.project-image img {
+    border-radius: 20px;
+    box-shadow: 1px 3px 6px rgba(0, 0, 0, .5);
+}
+.project-image:hover{
+    img{
+        box-shadow: 2px 6px 12px rgba(0, 0, 0, .5);
+    }
+}

@@ -20,13 +20,13 @@ export class HomeComponent implements OnInit {
    }
 
   ngOnInit() {
-    const list = this.db.list('/flamelink/environments/production/content/blogPost/en-US', ref => ref.limitToLast(3)).valueChanges();
+    const list = this.db.list('/flamelink/environments/production/content/blogPost/en-US', ref => ref.limitToLast(3).orderByChild('date')).valueChanges();
     list.subscribe(posts => {
       this.posts = posts;
       console.log(this.posts);
       this.loading = false;      
-    })
-    
+    });
+        
   }
 
 }

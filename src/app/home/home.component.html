@@ -13,10 +13,10 @@
 <section class="section blog">
   <div class="hero-body">
     <div class="container has-text-centered" data-aos="fade-up">
-      <h1 class="title home-title has-text-black is-size-1-mobile">
+      <h1 class="title home-title has-text-white is-size-1-mobile">
         Blog.
       </h1>
-      <h2 class="subtitle home-description has-text-black">
+      <h2 class="subtitle home-description has-text-white">
         Check out some of the latest posts
       </h2>
     </div>
@@ -47,13 +47,15 @@
         <div class="media">
           <div class="media-content">
             <p class="title is-4">{{post.title}}</p>
-            <p class="subtitle is-6">{{post.author}}</p>
+            <div class="subtitle">
+              <p class="is-6 has-text-link">{{post.author}}</p>
+              <p class="is-5 has-text-primary">{{post.category}}</p>
+            </div>
           </div>
         </div>
     
         <div class="content">
-          {{post.summary}}<br>
-          <time datetime="2016-1-1">{{post.date}}</time>
+          {{post.date}}<br><br>{{post.summary}}
         </div>
         <a class="button is-link is-outlined" [routerLink]="['/read-post', post.id]">Read More</a>
       </div>
@@ -67,10 +69,10 @@
 <section class="section insta">
   <div class="hero-body">
     <div class="container has-text-centered" data-aos="fade-up">
-      <h1 class="title home-title has-text-black is-size-1-mobile">
+      <h1 class="title home-title has-text-white is-size-1-mobile">
         Instagram.
       </h1>
-      <h2 class="subtitle home-description has-text-black">
+      <h2 class="subtitle home-description has-text-white">
         Check out my instagram feed and follow me to get all the latest updates
       </h2>
     </div>

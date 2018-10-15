@@ -1,0 +1,34 @@
+<div class="container" >
+    <div class="container has-text-centered" data-aos="fade-up">
+        <h1 class="title about-title has-text-black is-size-1-mobile">
+            Projects.
+        </h1>
+        <h2 class="subtitle about-description has-text-black">
+            Here's a list of projects that I've worked on
+        </h2>
+    </div>
+
+
+    <div class="sk-circle" *ngIf="loading">
+        <div class="sk-circle1 sk-child"></div>
+        <div class="sk-circle2 sk-child"></div>
+        <div class="sk-circle3 sk-child"></div>
+        <div class="sk-circle4 sk-child"></div>
+        <div class="sk-circle5 sk-child"></div>
+        <div class="sk-circle6 sk-child"></div>
+        <div class="sk-circle7 sk-child"></div>
+        <div class="sk-circle8 sk-child"></div>
+        <div class="sk-circle9 sk-child"></div>
+        <div class="sk-circle10 sk-child"></div>
+        <div class="sk-circle11 sk-child"></div>
+        <div class="sk-circle12 sk-child"></div>
+    </div>
+
+    <div class="columns" *ngIf="!loading">
+        <div class="column is-half project-image-col" *ngFor="let project of projects">
+            <figure class="image project-image">
+                <img src="{{project.projectThumbnail}}" alt="Placeholder image">
+            </figure>
+        </div>
+    </div>
+</div>
