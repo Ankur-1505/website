@@ -1,0 +1,35 @@
+<div class="sk-circle" *ngIf="loading">
+  <div class="sk-circle1 sk-child"></div>
+  <div class="sk-circle2 sk-child"></div>
+  <div class="sk-circle3 sk-child"></div>
+  <div class="sk-circle4 sk-child"></div>
+  <div class="sk-circle5 sk-child"></div>
+  <div class="sk-circle6 sk-child"></div>
+  <div class="sk-circle7 sk-child"></div>
+  <div class="sk-circle8 sk-child"></div>
+  <div class="sk-circle9 sk-child"></div>
+  <div class="sk-circle10 sk-child"></div>
+  <div class="sk-circle11 sk-child"></div>
+  <div class="sk-circle12 sk-child"></div>
+</div>
+
+<div class="container" *ngIf="!loading">
+  <figure class="image is-2by1">
+    <img src="{{project.projectThumbnail}}">
+  </figure>
+  <div class="container project-header project-content-container">
+    <h1 class="title project-title">
+      {{project.projectName}}
+    </h1>
+    <div class="project-details-container">
+      <h2 class="project-duration">
+        Duration : {{project.startDate}} to {{project.endDate}}
+      </h2>
+    </div>
+
+    <div class="container post-content post-content-container">
+      <div [innerHTML]="project.projectDescription" class="project-description-content"></div>
+    </div>
+    <a class="button is-large is-fullwidth project-link is-link" href="{{project.projectUrl}}">Link to Project</a>
+  </div>
+</div>

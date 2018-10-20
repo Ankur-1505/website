@@ -1,34 +1,83 @@
-<div class="container" >
-    <div class="container has-text-centered" data-aos="fade-up">
-        <h1 class="title about-title has-text-black is-size-1-mobile">
-            Projects.
+<!--Name and Intro-->
+<section class="hero is-white is-fullheight =">
+    <div class="hero-body">
+    <div class="container" data-aos="fade-in">
+        <h1 class="title user-title has-text-black is-size-1-mobile">
+            Sanket Naik.
         </h1>
-        <h2 class="subtitle about-description has-text-black">
-            Here's a list of projects that I've worked on
+        <h2 class="subtitle user-description has-text-black">
+            App & Web Developer
         </h2>
     </div>
-
-
-    <div class="sk-circle" *ngIf="loading">
-        <div class="sk-circle1 sk-child"></div>
-        <div class="sk-circle2 sk-child"></div>
-        <div class="sk-circle3 sk-child"></div>
-        <div class="sk-circle4 sk-child"></div>
-        <div class="sk-circle5 sk-child"></div>
-        <div class="sk-circle6 sk-child"></div>
-        <div class="sk-circle7 sk-child"></div>
-        <div class="sk-circle8 sk-child"></div>
-        <div class="sk-circle9 sk-child"></div>
-        <div class="sk-circle10 sk-child"></div>
-        <div class="sk-circle11 sk-child"></div>
-        <div class="sk-circle12 sk-child"></div>
     </div>
+</section>
 
-    <div class="columns" *ngIf="!loading">
-        <div class="column is-half project-image-col" *ngFor="let project of projects">
+<!--Skills-->
+<section class="section">
+    <div class="container has-text-centered" data-aos="fade-in">
+        <h1 class="title user-title has-text-black is-size-1-mobile">
+            Skills.
+        </h1>
+    </div>
+</section>
+
+<div class="sk-circle" *ngIf="skills_loading">
+    <div class="sk-circle1 sk-child"></div>
+    <div class="sk-circle2 sk-child"></div>
+    <div class="sk-circle3 sk-child"></div>
+    <div class="sk-circle4 sk-child"></div>
+    <div class="sk-circle5 sk-child"></div>
+    <div class="sk-circle6 sk-child"></div>
+    <div class="sk-circle7 sk-child"></div>
+    <div class="sk-circle8 sk-child"></div>
+    <div class="sk-circle9 sk-child"></div>
+    <div class="sk-circle10 sk-child"></div>
+    <div class="sk-circle11 sk-child"></div>
+    <div class="sk-circle12 sk-child"></div>
+</div>
+
+<section class="section">
+    <div class="columns is-multiline is-centered is-variable is-4-mobile is-3-desktop">
+        <div class="column is-half has-text-centered skills-column" *ngFor="let skill of skills" data-aos="fade-in">
+            <h2 class="title skill-title has-text-black">
+                {{skill.skillName}}
+            </h2>
+            <h3 class="subtitle skill-description has-text-black">
+                {{skill.skillLevel}}
+            </h3>
+        </div>
+    </div>
+</section>
+<!--Projects-->
+<section class="section">
+    <div class="container has-text-centered" data-aos="fade-in">
+        <h1 class="title project-title has-text-black is-size-1-mobile">
+            Projects.
+        </h1>
+    </div>
+</section>
+
+<div class="sk-circle" *ngIf="projects_loading">
+    <div class="sk-circle1 sk-child"></div>
+    <div class="sk-circle2 sk-child"></div>
+    <div class="sk-circle3 sk-child"></div>
+    <div class="sk-circle4 sk-child"></div>
+    <div class="sk-circle5 sk-child"></div>
+    <div class="sk-circle6 sk-child"></div>
+    <div class="sk-circle7 sk-child"></div>
+    <div class="sk-circle8 sk-child"></div>
+    <div class="sk-circle9 sk-child"></div>
+    <div class="sk-circle10 sk-child"></div>
+    <div class="sk-circle11 sk-child"></div>
+    <div class="sk-circle12 sk-child"></div>
+</div>
+
+<section class="section">
+    <div class="project-columns columns is-gapless is-centered" *ngIf="!projects_loading">
+        <div class="column is-half" *ngFor="let project of projects" data-aos="fade-in">
             <figure class="image project-image">
-                <img src="{{project.projectThumbnail}}" alt="Placeholder image">
+                <img src="{{project.projectThumbnail}}" alt="Placeholder image" [routerLink]="['/project', project.id]">
             </figure>
         </div>
     </div>
-</div>
+</section>

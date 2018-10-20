@@ -14,6 +14,7 @@ import { PostComponent } from './post/post.component';
 import { BlogComponent } from './blog/blog.component';
 import { RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about.component';
+import { ProjectComponent } from './project/project.component';
 
 
 
@@ -24,7 +25,8 @@ import { AboutComponent } from './about/about.component';
     HomeComponent,
     PostComponent,
     BlogComponent,
-    AboutComponent
+    AboutComponent,
+    ProjectComponent
   ],
   imports: [
     BrowserModule,

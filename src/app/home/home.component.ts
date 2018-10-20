@@ -15,7 +15,7 @@ export class HomeComponent implements OnInit {
 
   constructor(@Inject(AosToken) aos,private db : AngularFireDatabase) {
     aos.init({
-      duration: 600,
+      duration: 300,
     });
    }
 
@@ -23,7 +23,6 @@ export class HomeComponent implements OnInit {
     const list = this.db.list('/flamelink/environments/production/content/blogPost/en-US', ref => ref.limitToLast(3).orderByChild('date')).valueChanges();
     list.subscribe(posts => {
       this.posts = posts;
-      console.log(this.posts);
       this.loading = false;      
     });
         

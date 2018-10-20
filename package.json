@@ -26,6 +26,7 @@
     "bulma": "^0.7.1",
     "core-js": "^2.5.4",
     "firebase": "^5.5.4",
+    "instafeed.js": "^1.4.1",
     "ng2-animate-on-scroll": "^1.0.11",
     "rxjs": "^6.0.0",
     "rxjs-compat": "^6.3.3",

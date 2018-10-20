@@ -1,16 +1,16 @@
 import { AngularFireDatabase } from '@angular/fire/database';
-import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-post',
-  templateUrl: './post.component.html',
-  styleUrls: ['./post.component.scss']
+  selector: 'app-project',
+  templateUrl: './project.component.html',
+  styleUrls: ['./project.component.scss']
 })
-export class PostComponent implements OnInit {
+export class ProjectComponent implements OnInit {
 
-  id : any;
-  post : any;
+  id: any;
+  project: any;
   loading: boolean = true;
 
   constructor(private route: ActivatedRoute, private db: AngularFireDatabase) {
@@ -18,15 +18,15 @@ export class PostComponent implements OnInit {
       this.id = params['id'];
     });
 
-    let path = '/flamelink/environments/production/content/blogPost/en-US/' + this.id;
+    let path = '/flamelink/environments/production/content/projects/en-US/' + this.id;
     const object = this.db.object(path).valueChanges();
     object.subscribe(obj => {
-      this.post = obj;
-      this.loading = false; 
+      this.project = obj;
+      this.loading = false;
     })
-  }
+   }
 
-  ngOnInit() {    
+  ngOnInit() {
   }
 
 }

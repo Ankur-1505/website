@@ -25,14 +25,12 @@ export class BlogComponent implements OnInit {
         const list = this.db.list('/flamelink/environments/production/content/blogPost/en-US').valueChanges();
         list.subscribe(obj => {
           this.posts = obj;
-          console.log(obj);
           this.loading = false;
         })
       }else{
         const list = this.db.list('/flamelink/environments/production/content/blogPost/en-US',ref => ref.orderByChild('category').equalTo(this.id)).valueChanges();
         list.subscribe(obj => {
           this.posts = obj;
-          console.log(obj);
           this.loading = false;
         })
       }

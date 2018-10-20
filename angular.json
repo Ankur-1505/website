@@ -40,7 +40,9 @@
               "./node_modules/bulma/css/bulma.css",
               "./node_modules/aos/dist/aos.css"
             ],
-            "scripts": []
+            "scripts": [
+              "./node_modules/instafeed.js/instafeed.min.js"
+            ]
           },
           "configurations": {
             "production": {

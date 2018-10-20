@@ -1,3 +1,7 @@
+<head>
+  <script src="//www.powr.io/powr.js?external-type=html"></script>
+</head>
+
 <section class="hero is-fullheight">
   <div class="hero-body welcome background-tint">
     <div class="container has-text-centered" data-aos="fade-up">
@@ -36,31 +40,31 @@
       <div class="sk-circle12 sk-child"></div>
     </div>
     <div class="columns post-container" *ngIf="!loading">
-      <div class="column" *ngFor="let post of posts" data-aos="fade-up">
-    <div class="card">
-      <div class="card-image">
-        <figure class="image is-4by3">
-          <img src="{{post.blogThumbnail}}" alt="Placeholder image">
-        </figure>
-      </div>
-      <div class="card-content">
-        <div class="media">
-          <div class="media-content">
-            <p class="title is-4">{{post.title}}</p>
-            <div class="subtitle">
-              <p class="is-6 has-text-link">{{post.author}}</p>
-              <p class="is-5 has-text-primary">{{post.category}}</p>
+      <div class="column" *ngFor="let post of posts" data-aos="fade-in">
+        <div class="card">
+          <div class="card-image">
+            <figure class="image is-2by1">
+              <img src="{{post.blogThumbnail}}" alt="Placeholder image">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="media">
+              <div class="media-content">
+                <p class="title is-4">{{post.title}}</p>
+                <div class="subtitle">
+                  <p class="is-6 has-text-link">{{post.author}}</p>
+                  <p class="is-5 has-text-primary">{{post.category}}</p>
+                </div>
+              </div>
             </div>
+
+            <div class="content">
+              {{post.date}}<br><br>{{post.summary}}
+            </div>
+            <a class="button is-link is-outlined" [routerLink]="['/read-post', post.id]">Read More</a>
           </div>
         </div>
-    
-        <div class="content">
-          {{post.date}}<br><br>{{post.summary}}
-        </div>
-        <a class="button is-link is-outlined" [routerLink]="['/read-post', post.id]">Read More</a>
       </div>
-    </div>
-    </div>
     </div>
 
 
@@ -77,8 +81,8 @@
       </h2>
     </div>
     <div class="feed">
-      <iframe src="https://www.powr.io/plugins/social-feed/view?unique_label=8b4e62f6_1520368048&external_type=iframe" width="100%"
-        height="600" frameborder="0"></iframe>
-    </div>
+    <div class="powr-social-feed" id="8b4e62f6_1520368048" data-aos="fade-in"></div>
   </div>
+  </div>
+
 </section>

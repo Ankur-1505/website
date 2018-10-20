@@ -1,20 +1,55 @@
-.about-title{
-    font-family: 'Bevan', cursive;
-    font-size: 3.5em;
+.sanket-back {
+    background-image: url('../../assets/background.svg');
 }
-.about-description{
+.user-title{
+    font-family: 'Candal', sans-serif;
+    font-size: 3.1em;
+}
+.user-description{
     font-family: 'K2D', sans-serif;
-    font-size: 1.3em;
+    font-size: 1.8em;
 }
-.project-image-col{
-    margin: 30px;
+.skills-column{
+    margin-top: 20px;
+}
+.skill-title{
+    font-family: 'Fjalla One', sans-serif;
+    font-size: 2.2em;
+}
+.skill-description{
+    font-family: 'K2D', sans-serif;
+    font-size: 2em;
+}
+.project-title{
+    font-family: 'Candal', sans-serif;
+    font-size: 2.8em;
+}
+.project-description{
+    font-family: 'K2D', sans-serif;
+    font-size: 1.5em;
+}
+.project-columns{
+    margin-top: 30px;
+}
+.projects-title-container{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.project-image {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 .project-image img {
-    border-radius: 20px;
-    box-shadow: 1px 3px 6px rgba(0, 0, 0, .5);
+    width: 90%;
+    border-radius: 10px;
+    -webkit-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 12px 1px rgba(0,0,0,0.75);    
 }
-.project-image:hover{
-    img{
-        box-shadow: 2px 6px 12px rgba(0, 0, 0, .5);
-    }
+.project-image img:hover{
+    -webkit-box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.75);
+    -moz-box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.75);
+    box-shadow: 4px 4px 20px 2px rgba(0,0,0,0.75);
 }
